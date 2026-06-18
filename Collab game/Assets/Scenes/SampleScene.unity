@@ -5311,7 +5311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cdb06c3c9c0a6448dd160f91e477be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  moveSpeed: 7
+  moveSpeed: 1.3
   orientation: {fileID: 1846813255}
 --- !u!1 &832575517
 GameObject:
