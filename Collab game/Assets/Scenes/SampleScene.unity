@@ -5287,7 +5287,7 @@ PrefabInstance:
     - target: {fileID: -7577739868436781572, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 6b3ad7755fcf0114b93a847a19845dab, type: 2}
+      objectReference: {fileID: -876546973899608171, guid: e17caaf92f813e64988388968bf5ae73, type: 3}
     - target: {fileID: 919132149155446097, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: m_Name
       value: The Trees
