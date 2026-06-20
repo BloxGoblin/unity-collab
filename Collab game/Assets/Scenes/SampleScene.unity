@@ -5246,7 +5246,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.097545
+      value: 10.112271
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5254,11 +5254,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.0482938
+      value: 3.030899
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9498893
+      value: -0.91476387
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5266,7 +5266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.31258675
+      value: 0.40398902
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5278,16 +5278,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -396.43
+      value: -407.656
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7577739868436781572, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7577739868436781572, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
+      propertyPath: m_RayTraceProcedural
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7577739868436781572, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: -876546973899608171, guid: e17caaf92f813e64988388968bf5ae73, type: 3}
+      objectReference: {fileID: 2100000, guid: 6b3ad7755fcf0114b93a847a19845dab, type: 2}
+    - target: {fileID: -7577739868436781572, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
+      propertyPath: m_RayTracingAccelStructBuildFlagsOverride
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 68a964ba7e608fe418b1fa84cc6a7138, type: 3}
       propertyPath: m_Name
       value: The Trees
