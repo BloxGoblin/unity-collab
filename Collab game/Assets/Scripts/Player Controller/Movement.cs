@@ -4,6 +4,7 @@ public class Movement : MonoBehaviour
 {
     public float moveSpeed;
     public Transform orientation;
+    public float groundDrag = 6f; // new
 
     float horizontalInput;
     float verticalInput;
@@ -15,6 +16,7 @@ public class Movement : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody>();
         rigidBody.freezeRotation = true;
+        rigidBody.drag = groundDrag; // what i think is missing
     }
 
     private void Update()
