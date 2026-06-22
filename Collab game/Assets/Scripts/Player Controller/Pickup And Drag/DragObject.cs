@@ -1,13 +1,12 @@
 using UnityEngine;
 
-public class PickUp : MonoBehaviour
+public class DragObject : MonoBehaviour
 {
-    public GameObject crosshair1, crosshair2;
+    public GameObject crosshair1, crosshair2, crosshair3; //1-Normal 2-Pick up 3-Drag
     public Transform _objectParent;
     public Transform objTransform, cameraTrans;
     public bool interactable, pickedup;
     public Rigidbody objRigidbody;
-    public float throwAmount;
 
     public KeyCode _actionKey = KeyCode.E;
 
@@ -15,9 +14,12 @@ public class PickUp : MonoBehaviour
     {
         if (other.CompareTag("MainCamera"))
         {
-            crosshair1.SetActive(false);
-            crosshair2.SetActive(true);
-            interactable = true;
+            if (!crosshair2.activeSelf)
+            {
+                crosshair1.SetActive(false);
+                crosshair3.SetActive(true);
+                interactable = true;
+            }
         }
     }
     void OnTriggerExit(Collider other)
@@ -27,15 +29,15 @@ public class PickUp : MonoBehaviour
             if(pickedup == false)
             {
                 crosshair1.SetActive(true);
-                crosshair2.SetActive(false);
+                crosshair3.SetActive(false);
                 interactable = false;
             }
             if (pickedup == true)
             {
                 objTransform.parent = _objectParent;
-                objRigidbody.useGravity = true;
+                //objRigidbody.useGravity = true;
                 crosshair1.SetActive(true);
-                crosshair2.SetActive(false);
+                crosshair3.SetActive(false);
                 interactable = false;
                 pickedup = false;
             }
@@ -48,20 +50,19 @@ public class PickUp : MonoBehaviour
             if (Input.GetKeyDown(_actionKey))
             {
                 objTransform.parent = cameraTrans;
-                objRigidbody.useGravity = false;
+                //objRigidbody.useGravity = true;
                 pickedup = true;
             }
 
-            //When you stop holding down the button the thing gets thrown
+            //When you stop holding down the button the thing gets dropped
             
             if(pickedup == true)
             {
                 if (Input.GetKeyUp(_actionKey))
                 {
-                    // Guy throws thingy hes holding
+                    // Guy drops thingy hes holding
                     objTransform.parent = _objectParent;
-                    objRigidbody.useGravity = true;
-                    objRigidbody.linearVelocity = cameraTrans.forward * throwAmount * Time.deltaTime;
+                    //objRigidbody.useGravity = true;
                     pickedup = false;
                 }
             }
