@@ -46,7 +46,7 @@ public class Movement : MonoBehaviour
         if (grounded)
             rigidBody.linearDamping = groundDrag;
         else
-            rigidBody.linearDamping = groundDrag * 0.05f;
+            rigidBody.linearDamping = -1;
     }
 
     private void FixedUpdate()
