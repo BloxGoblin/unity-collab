@@ -464,8 +464,8 @@ GameObject:
   - component: {fileID: 588741979660366335}
   - component: {fileID: -59254652468613267}
   m_Layer: 0
-  m_Name: IronOre_4
-  m_TagString: Untagged
+  m_Name: IronOre_Drop
+  m_TagString: CanPickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

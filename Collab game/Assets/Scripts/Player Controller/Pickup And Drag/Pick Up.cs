@@ -52,6 +52,7 @@ public class PickUp : MonoBehaviour
             {
                 objTransform.parent = cameraTrans;
                 objRigidbody.useGravity = false;
+                objRigidbody.linearVelocity = Vector3.zero;
                 pickedup = true;
             }
 
@@ -66,6 +67,10 @@ public class PickUp : MonoBehaviour
                     objRigidbody.useGravity = true;
                     objRigidbody.linearVelocity = cameraTrans.forward * throwAmount * Time.deltaTime;
                     pickedup = false;
+                }
+                else
+                {
+                    objRigidbody.linearVelocity = Vector3.zero;
                 }
             }
         }
