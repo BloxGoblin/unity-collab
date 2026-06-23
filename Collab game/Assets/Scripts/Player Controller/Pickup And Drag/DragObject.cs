@@ -4,7 +4,7 @@ public class DragObject : MonoBehaviour
 {
     public GameObject crosshair1, crosshair2, crosshair3; //1-Normal 2-Pick up 3-Drag
     public Transform _objectParent;
-    public Transform objTransform, cameraTrans;
+    public Transform objTransform, cameraTrans; 
     public bool interactable, pickedup;
     public Rigidbody objRigidbody;
 
