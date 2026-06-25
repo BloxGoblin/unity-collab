@@ -40,7 +40,8 @@ public class InvButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             if (Input.GetKeyDown(dropKey))
             {
                 GameObject obj = item.Object;
-                //Instantiate(obj, )
+
+                Vector3 pos = plrObject.position + (plrObject.forward*2.5f);
 
                 GameObject newObj = Instantiate(obj, pos, plrObject.rotation, dropsParent);
 
