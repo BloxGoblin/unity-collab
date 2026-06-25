@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 653599055987665148}
   - component: {fileID: 8051376298355692208}
   - component: {fileID: 4724821726649129877}
+  - component: {fileID: -7189392883751294921}
   m_Layer: 0
   m_Name: IronOre_Drop
   m_TagString: CanPickUp
@@ -164,3 +165,18 @@ MonoBehaviour:
   objRigidbody: {fileID: 8051376298355692208}
   throwAmount: 6000
   _actionKey: 101
+  _storeKey: 323
+  Item: {fileID: 11400000, guid: 41397a54ff3321b42950fc52d2fee756, type: 2}
+--- !u!114 &-7189392883751294921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7167828980546740408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 104a034c90e2ae943b1ab89f59640645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemController
+  Item: {fileID: 11400000, guid: 41397a54ff3321b42950fc52d2fee756, type: 2}

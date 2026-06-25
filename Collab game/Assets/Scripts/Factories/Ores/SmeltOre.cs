@@ -1,15 +1,12 @@
+using System;
 using UnityEngine;
 
 public class SmeltOre : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public GameObject _furnace;
+    public BoxCollider _collider;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
         
     }

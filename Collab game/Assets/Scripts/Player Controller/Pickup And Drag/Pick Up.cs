@@ -10,6 +10,10 @@ public class PickUp : MonoBehaviour
     public float throwAmount;
 
     public KeyCode _actionKey = KeyCode.E;
+    public KeyCode _storeKey = KeyCode.Mouse0; //Left click
+
+    [Header("If Object can be stored")]
+    public Item Item; // If the item can be stored
 
     void OnTriggerStay(Collider other)
     {
@@ -44,6 +48,13 @@ public class PickUp : MonoBehaviour
             }
         }
     }
+
+    void Store()
+    {
+        InventoryManager.Instance.Add(Item);
+        Destroy(gameObject);
+    }
+
     void Update()
     {
         if (interactable == true)
@@ -67,6 +78,17 @@ public class PickUp : MonoBehaviour
                     objRigidbody.useGravity = true;
                     objRigidbody.linearVelocity = cameraTrans.forward * throwAmount * Time.deltaTime;
                     pickedup = false;
+                }
+                else if (Input.GetKeyDown(_storeKey) && Item)
+                {
+                    if (!crosshair3.activeSelf)
+                    {
+                        crosshair1.SetActive(true);
+                        crosshair2.SetActive(false);
+                        interactable = false;
+                    }
+                    pickedup = false;
+                    Store();
                 }
                 else
                 {
