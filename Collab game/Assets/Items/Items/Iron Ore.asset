@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Items
   id: 1
   itemName: Iron Ore
-  value: 5
   icon: {fileID: 21300000, guid: ed3c23f59f8477a4684e07732d40f3d3, type: 3}
+  Object: {fileID: 7167828980546740408, guid: bba35d5cc9543994799cda76294c8050, type: 3}
