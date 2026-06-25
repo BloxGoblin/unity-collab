@@ -8,7 +8,7 @@ public class BasketballHoop : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("CanPickUp"))
+        if (other.GetComponent<PickUp>())
         {
             Destroy(other);
             print("Noob");

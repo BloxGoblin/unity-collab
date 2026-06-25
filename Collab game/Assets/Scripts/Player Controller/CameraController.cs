@@ -26,6 +26,7 @@ public class CameraController : MonoBehaviour
     public float sensX;
     public float sensY;
     public Transform orientation;
+    public Transform plrObj;
     private bool moveCam = true;
 
     float xRotation;
@@ -53,6 +54,7 @@ public class CameraController : MonoBehaviour
             //This part does the actual rotating
             transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
             orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+            plrObj.rotation = Quaternion.Euler(0,yRotation,0);
         }
     } 
 }

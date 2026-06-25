@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PickUp : MonoBehaviour
@@ -9,6 +10,7 @@ public class PickUp : MonoBehaviour
     public Rigidbody objRigidbody;
     public float throwAmount;
 
+    [Header("Keybinds")]
     public KeyCode _actionKey = KeyCode.E;
     public KeyCode _storeKey = KeyCode.Mouse0; //Left click
 
@@ -81,14 +83,23 @@ public class PickUp : MonoBehaviour
                 }
                 else if (Input.GetKeyDown(_storeKey) && Item)
                 {
-                    if (!crosshair3.activeSelf)
+                    int inInv = InventoryManager.Instance.Items.Count; //Hiw much in inventory
+
+                    if(inInv < 35) // 35 is max inventory space but we can probably change in the future
                     {
-                        crosshair1.SetActive(true);
-                        crosshair2.SetActive(false);
-                        interactable = false;
+                        if (!crosshair3.activeSelf)
+                        {
+                            crosshair1.SetActive(true);
+                            crosshair2.SetActive(false);
+                            interactable = false;
+                        }
+                        pickedup = false;
+                        Store();
                     }
-                    pickedup = false;
-                    Store();
+                    else
+                    {
+                        print("Clear up your inventory blud");
+                    }
                 }
                 else
                 {
