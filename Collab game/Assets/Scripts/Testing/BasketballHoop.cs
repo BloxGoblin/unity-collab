@@ -10,7 +10,6 @@ public class BasketballHoop : MonoBehaviour
     {
         if (other.GetComponent<PickUp>())
         {
-            Destroy(other);
             print("Noob");
         }
     }

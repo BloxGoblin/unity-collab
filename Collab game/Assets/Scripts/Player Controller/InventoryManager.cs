@@ -14,6 +14,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject InventoryItem;
 
     public Transform plrObj;
+    public GameObject infoUI;
     public Transform dropParent;
 
     [Header("Pick Up Settings")]
@@ -49,14 +50,12 @@ public class InventoryManager : MonoBehaviour
         foreach(var item in Items) //Adds the buttons
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
-            var itemName = obj.transform.Find("Name").GetComponent<TMP_Text>();
-            itemName.text = item.itemName;
-            
             var itemIcon = obj.transform.Find("Icon").GetComponent<Image>();
             itemIcon.sprite = item.icon;
 
             obj.GetComponent<InvButton>().item = item;
             obj.GetComponent<InvButton>().plrObject = plrObj;
+            obj.GetComponent<InvButton>().infoUI = infoUI;
             obj.GetComponent<InvButton>().dropsParent = dropParent;
 
             //pickup

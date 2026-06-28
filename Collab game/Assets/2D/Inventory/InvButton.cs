@@ -3,11 +3,13 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class InvButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Item item;
     public Transform plrObject;
+    public GameObject infoUI;
     public Transform dropsParent;
 
     private bool inButton = false;
@@ -25,17 +27,25 @@ public class InvButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void OnPointerEnter(PointerEventData eventData)
     {
         inButton = true;
+        infoUI.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         inButton = false;
+        infoUI.SetActive(false);
     }
 
     void Update()
     {
         if (inButton == true)
         {
+            if (infoUI.activeSelf == true)
+            {
+                infoUI.transform.position = Input.mousePosition;
+                infoUI.transform.Find("Item Name").GetComponent<TMP_Text>().text = item.itemName;
+            }
+
             //drop
             if (Input.GetKeyDown(dropKey))
             {
@@ -54,8 +64,13 @@ public class InvButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                     newObj.GetComponent<PickUp>().cameraTrans = _cameraTrans;
                 }
 
+                infoUI.SetActive(false);
                 Destroy(gameObject);
                 InventoryManager.Instance.Remove(item);
+            }
+            else
+            {
+                
             }
         }
     }
