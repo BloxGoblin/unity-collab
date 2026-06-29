@@ -52,11 +52,11 @@ public class InvButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                 {
                     infoUI.transform.Find("Item Description").GetComponent<TMP_Text>().text = item.itemDesc;
 
-                    float textHeight = infoUI.transform.Find("Item Description").GetComponent<TMP_Text>().preferredHeight;
+                    float textHeight = infoUI.transform.Find("Item Description").GetComponent<TMP_Text>().renderedHeight;
 
                     RectTransform rect = infoUI.GetComponent<RectTransform>();
 
-                    float uiSize = textHeight + 10;
+                    float uiSize = (textHeight*1.4f) + 10;
 
                     rect.sizeDelta = new Vector2(rect.sizeDelta.x, uiSize);
                 }
