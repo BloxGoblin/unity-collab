@@ -8240,6 +8240,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485364320}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1525706468
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1254730743114619650, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: m_Name
+      value: IronIngot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.97817
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.63435
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134773714608693223, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: crosshair1
+      value: 
+      objectReference: {fileID: 1014358805}
+    - target: {fileID: 9134773714608693223, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: crosshair2
+      value: 
+      objectReference: {fileID: 1016904508}
+    - target: {fileID: 9134773714608693223, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: crosshair3
+      value: 
+      objectReference: {fileID: 2106890764}
+    - target: {fileID: 9134773714608693223, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: cameraTrans
+      value: 
+      objectReference: {fileID: 330585546}
+    - target: {fileID: 9134773714608693223, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
+      propertyPath: _objectParent
+      value: 
+      objectReference: {fileID: 1060671590}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
 --- !u!1 &1530582528
 GameObject:
   m_ObjectHideFlags: 0
@@ -9340,63 +9417,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106890764}
   m_CullTransparentMesh: 1
---- !u!1001 &7620551033530018113
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1254730743114619650, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
-      propertyPath: m_Name
-      value: Iron Ingot
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.155628
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.243
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.114
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883175733194097080, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bddb9f50849c12344bccd926dd93da05, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -9410,7 +9430,6 @@ SceneRoots:
   - {fileID: 1290746942}
   - {fileID: 896473781}
   - {fileID: 1430385130}
-  - {fileID: 7620551033530018113}
   - {fileID: 21338873}
   - {fileID: 1114925390}
   - {fileID: 1568009633}
@@ -9419,3 +9438,4 @@ SceneRoots:
   - {fileID: 1865493453}
   - {fileID: 1022086788}
   - {fileID: 1060671590}
+  - {fileID: 1525706468}
