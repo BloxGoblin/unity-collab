@@ -6,6 +6,7 @@ public class Item : ScriptableObject
 {
     public int id;
     public string itemName;
+    public string itemDesc;
     public Sprite icon;
     public GameObject Object;
 }

@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem;
 using TMPro;
+using JetBrains.Annotations;
+using System;
 
 public class InvButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -42,8 +44,26 @@ public class InvButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         {
             if (infoUI.activeSelf == true)
             {
-                infoUI.transform.position = Input.mousePosition;
+                Vector2 uiPos = new Vector2(Input.mousePosition.x + 10, Input.mousePosition.y - 10);
+                infoUI.transform.position = uiPos;
                 infoUI.transform.Find("Item Name").GetComponent<TMP_Text>().text = item.itemName;
+
+                if (item.itemDesc.Length > 0)
+                {
+                    infoUI.transform.Find("Item Description").GetComponent<TMP_Text>().text = item.itemDesc;
+
+                    float textHeight = infoUI.transform.Find("Item Description").GetComponent<TMP_Text>().preferredHeight;
+
+                    RectTransform rect = infoUI.GetComponent<RectTransform>();
+
+                    float uiSize = textHeight + 10;
+
+                    rect.sizeDelta = new Vector2(rect.sizeDelta.x, uiSize);
+                }
+                else
+                {
+                    infoUI.transform.Find("Item Description").GetComponent<TMP_Text>().text = "Empty Description";
+                }
             }
 
             //drop
