@@ -186,6 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 96386527}
   - component: {fileID: 96386528}
+  - component: {fileID: 96386529}
   m_Layer: 0
   m_Name: Furnace
   m_TagString: Untagged
@@ -230,6 +231,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0027122, y: 1.2886174, z: 1.0116196}
   m_Center: {x: 2.0414762, y: 0.9225091, z: 4.9211884}
+--- !u!114 &96386529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96386526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6e4b22bba013a4785da4389d82df91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmeltOre
+  _furnace: {fileID: 96386526}
+  _collider: {fileID: 96386528}
+  dropsParent: {fileID: 1060671590}
+  heat: 1500
+  inFurnace: []
+  crosshair1: {fileID: 1014358805}
+  crosshair2: {fileID: 1016904508}
+  crosshair3: {fileID: 2106890764}
+  _objectParent: {fileID: 1060671590}
+  _cameraTrans: {fileID: 330585546}
 --- !u!1 &105624217
 GameObject:
   m_ObjectHideFlags: 0

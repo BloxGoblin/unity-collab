@@ -61,12 +61,16 @@ public class PickUp : MonoBehaviour
     {
         if (interactable == true)
         {
-            if (Input.GetKeyDown(_actionKey))
+            //if (Input.GetKeyDown(_actionKey)) Exactly first frame guy presses key (Evil)
+            if (Input.GetKey(_actionKey)) // Any frame as long as key is down (Good)
             {
-                objTransform.parent = cameraTrans;
-                objRigidbody.useGravity = false;
-                objRigidbody.linearVelocity = Vector3.zero;
-                pickedup = true;
+                if (pickedup == false)
+                {
+                    objTransform.parent = cameraTrans;
+                    objRigidbody.useGravity = false;
+                    objRigidbody.linearVelocity = Vector3.zero;
+                    pickedup = true;
+                }
             }
 
             //When you stop holding down the button the thing gets thrown

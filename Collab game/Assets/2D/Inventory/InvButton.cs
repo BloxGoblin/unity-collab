@@ -88,10 +88,6 @@ public class InvButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                 Destroy(gameObject);
                 InventoryManager.Instance.Remove(item);
             }
-            else
-            {
-                
-            }
         }
     }
 }

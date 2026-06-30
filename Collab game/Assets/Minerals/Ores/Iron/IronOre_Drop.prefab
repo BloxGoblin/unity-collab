@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8051376298355692208}
   - component: {fileID: 4724821726649129877}
   - component: {fileID: -7189392883751294921}
+  - component: {fileID: -3137389360622642320}
   m_Layer: 0
   m_Name: IronOre_Drop
   m_TagString: Untagged
@@ -180,3 +181,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemController
   Item: {fileID: 11400000, guid: 41397a54ff3321b42950fc52d2fee756, type: 2}
+--- !u!114 &-3137389360622642320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7167828980546740408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f300b2f5913f893408545d2c886fe511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanSmelt
+  smeltedItem: {fileID: 11400000, guid: 0949feacf726b824cb3b9ffd3caa5993, type: 2}
+  meltingPoint: 1500
