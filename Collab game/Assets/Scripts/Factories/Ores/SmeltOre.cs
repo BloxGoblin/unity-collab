@@ -67,10 +67,16 @@ public class SmeltOre : MonoBehaviour
                 }
                 else
                 {
+                    //smelt
                     GameObject result = content.GetComponent<CanSmelt>().smeltedItem.Object;
                     Vector3 spawnPos = content.transform.position; // Adjust this later
 
                     Instantiate(result, spawnPos, gameObject.transform.rotation, dropsParent);
+
+                    if (result.name == "IronIngot")
+                    {
+                        AchievmentHandler.Instance.award(2); //Achievment for making iron ingot
+                    }
 
                     if (result.GetComponent<PickUp>())
                     {

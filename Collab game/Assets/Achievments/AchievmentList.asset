@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4093f562df5e83244bf69b017dd276aa, type: 3}
+  m_Name: AchievmentList
+  m_EditorClassIdentifier: Assembly-CSharp::AchievmentList
+  achievments:
+  - id: 1
+    achievmentName: It Begins
+    achievmentDesc: Construct your first doohickey
+    icon: {fileID: 0}
+    requiredAmount: 0
+    progression: 0
+  - id: 2
+    achievmentName: Cave Full Of Scraps
+    achievmentDesc: Make your first Iron Ingot from Raw Iron
+    icon: {fileID: 0}
+    requiredAmount: 0
+    progression: 0
