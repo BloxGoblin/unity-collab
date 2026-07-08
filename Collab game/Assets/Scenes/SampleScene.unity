@@ -246,6 +246,7 @@ MonoBehaviour:
   _furnace: {fileID: 96386526}
   _collider: {fileID: 96386528}
   dropsParent: {fileID: 1060671590}
+  player: {fileID: 654237072}
   heat: 1500
   inFurnace: []
   crosshair1: {fileID: 1014358805}
@@ -6251,6 +6252,8 @@ MonoBehaviour:
   groundCheck: {fileID: 547778802}
   groundDistance: 0.2
   orientation: {fileID: 1846813255}
+  respawnPoint: {x: 0, y: 5, z: 0}
+  player: {fileID: 654237072}
 --- !u!114 &654237075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6291,6 +6294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   player: {fileID: 654237071}
+  playing: 1
 --- !u!1 &689314812
 GameObject:
   m_ObjectHideFlags: 0
@@ -7367,6 +7371,7 @@ MonoBehaviour:
   _oreType: {fileID: 7167828980546740408, guid: bba35d5cc9543994799cda76294c8050, type: 3}
   _spawnPoint: {fileID: 1116002145}
   _oresParent: {fileID: 1060671590}
+  player: {fileID: 654237072}
   _cooldown: 2
   _canPickUpOres: 1
   crosshair1: {fileID: 1014358805}

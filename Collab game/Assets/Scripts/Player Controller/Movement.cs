@@ -27,6 +27,10 @@ public class Movement : MonoBehaviour
     Vector3 moveDirection;
     Rigidbody rigidBody;
 
+    [Header("Other")]
+    public Vector3 respawnPoint;
+    public Transform player;
+
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
@@ -35,6 +39,10 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+        if (player.GetComponent<Player>().playing == false)
+        {
+            return; // If game isnt running then STOP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        }
         //Ground check
         grounded = Physics.CheckSphere(groundCheck.position, groundDistance, whatIsGround); 
 
@@ -47,10 +55,19 @@ public class Movement : MonoBehaviour
             rigidBody.linearDamping = groundDrag;
         else
             rigidBody.linearDamping = -1;
+
+        if (player.transform.position.y < -25)
+        {
+            player.transform.position = respawnPoint;
+        }
     }
 
     private void FixedUpdate()
     {
+        if (player.GetComponent<Player>().playing == false)
+        {
+            return;
+        }
         movePlayer();
     }
 

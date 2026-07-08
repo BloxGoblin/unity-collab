@@ -8,6 +8,7 @@ public class SpawnOre : MonoBehaviour
     public GameObject _oreType;
     public Transform _spawnPoint;
     public Transform _oresParent;
+    public Transform player;
 
     [Header("Customize")]
 
@@ -26,6 +27,11 @@ public class SpawnOre : MonoBehaviour
 
     private void Update()
     {
+        if (player.GetComponent<Player>().playing == false)
+        {
+            return;
+        }
+        
         _timeSinceLast += Time.deltaTime;
         if (_timeSinceLast > _cooldown)
         {

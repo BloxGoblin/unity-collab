@@ -9,6 +9,7 @@ public class SmeltOre : MonoBehaviour
     public GameObject _furnace;
     public BoxCollider _collider;
     public Transform dropsParent;
+    public Transform player;
 
     public float heat;
 
@@ -49,6 +50,12 @@ public class SmeltOre : MonoBehaviour
     void Update()
     {
         if (inFurnace.Count > 0)
+        
+        if (player.GetComponent<Player>().playing == false)
+        {
+            return;
+        }
+
         {
             for (int i = inFurnace.Count - 1; i >= 0; i--)
             {
