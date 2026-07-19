@@ -27,16 +27,10 @@ public class CameraController : MonoBehaviour
     public float sensY;
     public Transform orientation;
     public Transform plrObj;
-    private bool moveCam = true;
+    private bool moveCam;
 
     float xRotation;
     float yRotation;
-
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
 
     private void Update()
     {

@@ -1,7 +1,15 @@
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Player : MonoBehaviour
 {
     public GameObject player;
-    public bool playing = true; // Remove part where it gets setr to true automatically when we have a main menu thingy
+    public bool playing = false;
+
+    public GameObject mainMenu;
+
+    void Start()
+    {
+        mainMenu.SetActive(true);
+    }
 }

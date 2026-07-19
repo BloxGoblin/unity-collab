@@ -17,20 +17,15 @@ public class AchievmentHandler : MonoBehaviour
         {
             if (achievment.id == id)
             {
-                if (PlayerPrefs.GetInt(achievment.achievmentName, 0) == 1) // Guy already has the achievment
-                {
-                    break;
-                }
-
                 print("Guy unlocked achievment hooray");
-                SaveAchievment(achievment.achievmentName);
+                SaveAchievment();
                 break;
             }
         }
     }
 
-    private void SaveAchievment(string achievmentName)
+    private void SaveAchievment()
     {
-        PlayerPrefs.SetInt(achievmentName, 1);
+        PlayerPrefs.DeleteAll();
     }
 }
