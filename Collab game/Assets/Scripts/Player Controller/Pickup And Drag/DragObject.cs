@@ -16,8 +16,11 @@ public class DragObject : MonoBehaviour
         {
             if (!crosshair2.activeSelf)
             {
-                crosshair1.SetActive(false);
-                crosshair3.SetActive(true);
+                if (CrosshairsEnabled() == true)
+                {
+                    crosshair1.SetActive(false);
+                    crosshair3.SetActive(true);
+                }
                 interactable = true;
             }
         }
@@ -28,16 +31,22 @@ public class DragObject : MonoBehaviour
         {
             if(pickedup == false)
             {
-                crosshair1.SetActive(true);
-                crosshair3.SetActive(false);
+                if (CrosshairsEnabled() == true)
+                {
+                    crosshair1.SetActive(true);
+                    crosshair3.SetActive(false);
+                }
                 interactable = false;
             }
             if (pickedup == true)
             {
                 objTransform.parent = _objectParent;
                 //objRigidbody.useGravity = true;
-                crosshair1.SetActive(true);
-                crosshair3.SetActive(false);
+                if (CrosshairsEnabled() == true)
+                {
+                    crosshair1.SetActive(true);
+                    crosshair3.SetActive(false);
+                }
                 interactable = false;
                 pickedup = false;
             }
@@ -66,6 +75,18 @@ public class DragObject : MonoBehaviour
                     pickedup = false;
                 }
             }
+        }
+    }
+
+    bool CrosshairsEnabled()
+    {
+        if (crosshair1.activeSelf == false && crosshair2.activeSelf == false && crosshair3.activeSelf == false)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
         }
     }
 }

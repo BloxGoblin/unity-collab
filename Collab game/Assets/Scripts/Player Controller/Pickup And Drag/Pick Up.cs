@@ -23,8 +23,11 @@ public class PickUp : MonoBehaviour
         {
             if (!crosshair3.activeSelf)
             {
-                crosshair1.SetActive(false);
-                crosshair2.SetActive(true);
+                if (CrosshairsEnabled() == true)
+                {
+                    crosshair1.SetActive(false);
+                    crosshair2.SetActive(true);
+                }
                 interactable = true;
             }
         }
@@ -35,16 +38,22 @@ public class PickUp : MonoBehaviour
         {
             if(pickedup == false)
             {
-                crosshair1.SetActive(true);
-                crosshair2.SetActive(false);
+                if (CrosshairsEnabled() == true)
+                {
+                    crosshair1.SetActive(true);
+                    crosshair2.SetActive(false);
+                }
                 interactable = false;
             }
             if (pickedup == true)
             {
                 objTransform.parent = _objectParent;
                 objRigidbody.useGravity = true;
-                crosshair1.SetActive(true);
-                crosshair2.SetActive(false);
+                if (CrosshairsEnabled() == true)
+                {
+                    crosshair1.SetActive(true);
+                    crosshair2.SetActive(false);
+                }
                 interactable = false;
                 pickedup = false;
             }
@@ -93,8 +102,11 @@ public class PickUp : MonoBehaviour
                     {
                         if (!crosshair3.activeSelf)
                         {
-                            crosshair1.SetActive(true);
-                            crosshair2.SetActive(false);
+                            if (CrosshairsEnabled() == true)
+                            {
+                                crosshair1.SetActive(true);
+                                crosshair2.SetActive(false);
+                            }
                             interactable = false;
                         }
                         pickedup = false;
@@ -110,6 +122,18 @@ public class PickUp : MonoBehaviour
                     objRigidbody.linearVelocity = Vector3.zero;
                 }
             }
+        }
+    }
+
+    bool CrosshairsEnabled()
+    {
+        if (crosshair1.activeSelf == false && crosshair2.activeSelf == false && crosshair3.activeSelf == false)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
         }
     }
 }

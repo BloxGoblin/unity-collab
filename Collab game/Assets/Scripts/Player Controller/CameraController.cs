@@ -4,11 +4,20 @@ public class CameraController : MonoBehaviour
 {
     public static CameraController Instance;
 
+    public GameObject crosshair1;
+    public GameObject crosshair2;
+    public GameObject crosshair3;
+
+
     public void UnlockMouse()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         moveCam = false;
+
+        crosshair1.SetActive(false);
+        crosshair2.SetActive(false);
+        crosshair3.SetActive(false);
     }
 
     public void LockMouse()
@@ -16,6 +25,8 @@ public class CameraController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         moveCam = true;
+
+        crosshair1.SetActive(true);
     }
 
     private void Awake()

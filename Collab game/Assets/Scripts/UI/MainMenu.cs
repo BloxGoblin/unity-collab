@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class MenuPlay : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     public GameObject menu;
     public Transform player;
