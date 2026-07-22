@@ -2,6 +2,8 @@ using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Data.Common;
+using UnityEngine.InputSystem.Interactions;
+using System;
 
 public static class SaveSystem
 {
@@ -15,6 +17,8 @@ public static class SaveSystem
 
         formatter.Serialize(stream, data);
         stream.Close();
+
+        Console.WriteLine("Poop");
     }
 
     public static PlayerData LoadPlayerData(Player player)
