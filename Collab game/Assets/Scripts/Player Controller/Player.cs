@@ -31,14 +31,19 @@ public class Player : MonoBehaviour
         position.z = data.position[2];
 
         transform.position = position;
-        //float[] inventory = new float[data.inventory.Length];
 
-        //int index = 0;
-        //foreach (var id in data.inventory)
-        //{
-            //inventory[index] = id;
-            //index += 1;
-        //}
+        // inventory
+        foreach (var id in data.inventory)
+        {
+            foreach (var item in ItemsIndex.Instance.ItemIndex)
+            {
+                if (item.id == id)
+                {
+                    InventoryManager.Instance.Add(item);
+                    continue;
+                }
+            }
+        }
     }
 
     void Update()

@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class AchievmentHandler : MonoBehaviour
@@ -5,7 +6,7 @@ public class AchievmentHandler : MonoBehaviour
     public static AchievmentHandler Instance;
 
     [SerializeField]
-    private AchievmentList achievments;
+    public AchievmentList achievments;
 
     private void Awake()
     {
@@ -18,14 +19,14 @@ public class AchievmentHandler : MonoBehaviour
             if (achievment.id == id)
             {
                 print("Guy unlocked achievment hooray");
-                SaveAchievment();
+                SaveAchievment(id);
                 break;
             }
         }
     }
 
-    private void SaveAchievment()
+    private void SaveAchievment(int id)
     {
-        PlayerPrefs.DeleteAll();
+        
     }
 }
