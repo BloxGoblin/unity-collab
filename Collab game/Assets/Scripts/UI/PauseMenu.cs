@@ -9,7 +9,14 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         player.GetComponent<Player>().playing = true;
         CameraController.Instance.LockMouse();
+    }
 
-        Player.Instance.SaveGame();
+    public void SaveGame()
+    {
+        pauseMenu.SetActive(false);
+        player.GetComponent<Player>().playing = true;
+        CameraController.Instance.LockMouse();
+        
+        player.GetComponent<Player>().SaveGame();
     }
 }

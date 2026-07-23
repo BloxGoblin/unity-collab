@@ -10,5 +10,8 @@ public class MainMenu : MonoBehaviour
         menu.SetActive(false);
         player.GetComponent<Player>().playing = true;
         CameraController.Instance.LockMouse();
+
+        //Temporary
+        player.GetComponent<Player>().LoadGame();
     }
 }

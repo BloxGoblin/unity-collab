@@ -80,11 +80,6 @@ public class SmeltOre : MonoBehaviour
 
                     Instantiate(result, spawnPos, gameObject.transform.rotation, dropsParent);
 
-                    if (result.name == "IronIngot")
-                    {
-                        AchievmentHandler.Instance.award(2); //Achievment for making iron ingot
-                    }
-
                     if (result.GetComponent<PickUp>())
                     {
                         result.GetComponent<PickUp>().crosshair1 = crosshair1;
@@ -96,6 +91,11 @@ public class SmeltOre : MonoBehaviour
 
                     Destroy(content);
                     inFurnace.RemoveAt(i);
+
+                    if (result.name == "IronIngot")
+                    {
+                        AchievmentHandler.Instance.award(2); //Achievment for making iron ingot
+                    }
                 }
             }
         }

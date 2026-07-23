@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     public KeyCode jumpKey = KeyCode.Space; //Add keybind options later maybe
 
     [Header("Ground Check")]
-    public LayerMask whatIsGround;
+    public LayerMask layer; // Anything unless it has the special NotGround layer applied
     public Transform groundCheck;
     public float groundDistance;
     bool grounded;
@@ -44,7 +44,7 @@ public class Movement : MonoBehaviour
             return; // If game isnt running then STOP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         }
         //Ground check
-        grounded = Physics.CheckSphere(groundCheck.position, groundDistance, whatIsGround); 
+        grounded = Physics.CheckSphere(groundCheck.position, groundDistance, layer); 
 
 
         myInput();

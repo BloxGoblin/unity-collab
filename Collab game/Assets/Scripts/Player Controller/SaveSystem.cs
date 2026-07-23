@@ -17,8 +17,6 @@ public static class SaveSystem
 
         formatter.Serialize(stream, data);
         stream.Close();
-
-        Console.WriteLine("Poop");
     }
 
     public static PlayerData LoadPlayerData(Player player)

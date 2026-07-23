@@ -442,21 +442,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: SaveGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 144034486}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: ResumeGame
+        m_MethodName: SaveGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6190,7 +6178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 547778802}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6345,7 +6333,7 @@ GameObject:
   - component: {fileID: 549537572}
   - component: {fileID: 549537571}
   - component: {fileID: 549537570}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Jim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6497,7 +6485,7 @@ GameObject:
   - component: {fileID: 641449272}
   - component: {fileID: 641449271}
   - component: {fileID: 641449270}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Jim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6819,9 +6807,9 @@ MonoBehaviour:
   jumpCD: 0.25
   airMultiplier: 0.4
   jumpKey: 32
-  whatIsGround:
+  layer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 1
   groundCheck: {fileID: 547778802}
   groundDistance: 0.2
   orientation: {fileID: 1846813255}
@@ -8944,7 +8932,7 @@ GameObject:
   - component: {fileID: 1258305475}
   - component: {fileID: 1258305474}
   - component: {fileID: 1258305473}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9153,7 +9141,7 @@ GameObject:
   - component: {fileID: 1296964395}
   - component: {fileID: 1296964394}
   - component: {fileID: 1296964393}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Jim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9823,7 +9811,7 @@ GameObject:
   - component: {fileID: 1478366409}
   - component: {fileID: 1478366408}
   - component: {fileID: 1478366407}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10126,7 +10114,7 @@ GameObject:
   - component: {fileID: 1530582532}
   - component: {fileID: 1530582531}
   - component: {fileID: 1530582530}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Jim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11350,7 +11338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1846813255}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12394,7 +12382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2087365980}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CamPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
