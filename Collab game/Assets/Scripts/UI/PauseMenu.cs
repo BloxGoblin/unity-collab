@@ -11,6 +11,12 @@ public class PauseMenu : MonoBehaviour
         CameraController.Instance.LockMouse();
     }
 
+    public void achievements()
+    {
+        AchievementsUI.Instance.OpenAchievementsUI(pauseMenu);
+        pauseMenu.SetActive(false);
+    }
+
     public void SaveGame()
     {
         pauseMenu.SetActive(false);

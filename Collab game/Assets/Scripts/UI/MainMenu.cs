@@ -14,4 +14,9 @@ public class MainMenu : MonoBehaviour
         //Temporary
         player.GetComponent<Player>().LoadGame();
     }
+
+    public void achievements()
+    {
+        AchievementsUI.Instance.OpenAchievementsUI(menu);
+    }
 }
