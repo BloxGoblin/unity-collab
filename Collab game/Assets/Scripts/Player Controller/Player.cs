@@ -14,11 +14,32 @@ public class Player : MonoBehaviour
     void Start()
     {
         mainMenu.SetActive(true);
+
+        // load achievements as soon as game starts
+
+        AchievementData data = SaveSystem.LoadAchievements(this);
+
+        if (data != null)
+        {
+            foreach (var id in data.achievements)
+            {
+                foreach (var achievement in player.GetComponent<AchievmentHandler>().achievments.achievments)
+                {
+                    if (achievement.id == id)
+                    {
+                        player.GetComponent<AchievmentHandler>().UnlockedAchievements.Add(achievement);
+                        continue;
+                    }
+                }
+            }
+        }
     }
 
     public void SaveGame()
     {
         SaveSystem.SavePlayerData(this);
+
+        SaveSystem.SaveAchievments(this);
     }
 
     public void LoadGame()
@@ -44,6 +65,11 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SaveAchievements()
+    {
+        SaveSystem.SaveAchievments(this);
     }
 
     void Update()

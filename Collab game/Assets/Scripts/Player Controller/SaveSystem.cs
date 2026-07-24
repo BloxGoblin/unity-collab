@@ -38,4 +38,37 @@ public static class SaveSystem
             return null;
         }
     }
+
+    public static void SaveAchievments(Player player)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/player.achievements";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        AchievementData data = new AchievementData(player);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+    public static AchievementData LoadAchievements(Player player)
+    {
+        string path = Application.persistentDataPath + "/player.achievements";
+
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            AchievementData data = formatter.Deserialize(stream) as AchievementData;
+            stream.Close();
+
+            return data;
+        }
+        else
+        {
+            Debug.LogError("Big oopsie alert: No save file found in " + path);
+            return null;
+        }
+    }
 }

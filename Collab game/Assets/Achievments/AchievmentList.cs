@@ -15,6 +15,4 @@ public class Achievment
     public string achievmentName;
     public string achievmentDesc;
     public Sprite icon;
-    public float requiredAmount;
-    public float progression;
 }

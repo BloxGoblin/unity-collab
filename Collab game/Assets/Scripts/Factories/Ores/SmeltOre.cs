@@ -82,7 +82,6 @@ public class SmeltOre : MonoBehaviour
 
                     if (result.GetComponent<PickUp>())
                     {
-                        print("Ok");
                         result.GetComponent<PickUp>().crosshair1 = crosshair1;
                         result.GetComponent<PickUp>().crosshair2 = crosshair2;
                         result.GetComponent<PickUp>().crosshair3 = crosshair3;
