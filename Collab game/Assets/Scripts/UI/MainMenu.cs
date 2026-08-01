@@ -18,5 +18,6 @@ public class MainMenu : MonoBehaviour
     public void achievements()
     {
         AchievementsUI.Instance.OpenAchievementsUI(menu);
+        menu.SetActive(false);
     }
 }

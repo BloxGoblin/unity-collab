@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.XR;
@@ -10,6 +12,7 @@ public class Player : MonoBehaviour
 
     public GameObject mainMenu;
     public GameObject pauseMenu;
+    public GameObject achievementMenu;
 
     void Start()
     {
@@ -75,11 +78,19 @@ public class Player : MonoBehaviour
     void Update()
     {
         //Pause
-        if (Input.GetKeyDown(KeyCode.Escape) && player.GetComponent<Player>().playing == true)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pauseMenu.SetActive(true);
-            CameraController.Instance.UnlockMouse();
-            player.GetComponent<Player>().playing = false;
+            if (player.GetComponent<Player>().playing == true)
+            {
+                pauseMenu.SetActive(true);
+                CameraController.Instance.UnlockMouse();
+                player.GetComponent<Player>().playing = false;
+            }
+            else if (achievementMenu.activeSelf == true)
+            {
+                achievementMenu.SetActive(false);
+                mainMenu.SetActive(true);
+            }
         }
     }
 }
