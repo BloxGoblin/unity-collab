@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public GameObject mainMenu;
     public GameObject pauseMenu;
     public GameObject achievementMenu;
+    public GameObject optionsMenu;
 
     void Start()
     {
@@ -90,6 +91,10 @@ public class Player : MonoBehaviour
             {
                 achievementMenu.SetActive(false);
                 mainMenu.SetActive(true);
+            }
+            else if (optionsMenu.activeSelf == true)
+            {
+                OptionsMenu.Instance.CloseOptionsUI();
             }
         }
     }

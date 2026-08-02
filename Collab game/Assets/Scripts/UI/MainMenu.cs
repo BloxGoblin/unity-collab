@@ -20,4 +20,9 @@ public class MainMenu : MonoBehaviour
         AchievementsUI.Instance.OpenAchievementsUI(menu);
         menu.SetActive(false);
     }
+
+    public void Options()
+    {
+        OptionsMenu.Instance.OpenOptionsUI(menu);
+    }
 }
