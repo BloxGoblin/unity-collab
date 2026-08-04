@@ -11,7 +11,7 @@ public class PickUp : MonoBehaviour
     public float throwAmount;
 
     [Header("Keybinds")]
-    public KeyCode _actionKey = KeyCode.E;
+    public KeyCode _actionKey;
     public KeyCode _storeKey = KeyCode.Mouse0; //Left click
 
     [Header("If Object can be stored")]
@@ -68,6 +68,8 @@ public class PickUp : MonoBehaviour
 
     void Update()
     {
+        _actionKey = Keybinds.Instance.Interact; // Constantly set the action key to the correct keybind
+        
         if (interactable == true)
         {
             //if (Input.GetKeyDown(_actionKey)) Exactly first frame guy presses key (Evil)
