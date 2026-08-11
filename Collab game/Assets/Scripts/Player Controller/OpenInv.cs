@@ -4,10 +4,11 @@ using UnityEngine.InputSystem;
 public class OpenInv : MonoBehaviour
 {
     public GameObject inventory;
-    public KeyCode toggleKey = KeyCode.Tab;
+    public KeyCode toggleKey;
 
     void Update()
     {
+        toggleKey = Keybinds.Instance.OpenInventory;
         if (Input.GetKeyDown(toggleKey))
         {
             if (inventory.activeSelf)

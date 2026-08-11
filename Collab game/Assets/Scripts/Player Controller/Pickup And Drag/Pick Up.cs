@@ -12,7 +12,7 @@ public class PickUp : MonoBehaviour
 
     [Header("Keybinds")]
     public KeyCode _actionKey;
-    public KeyCode _storeKey = KeyCode.Mouse0; //Left click
+    public KeyCode _storeKey;
 
     [Header("If Object can be stored")]
     public Item Item; // If the item can be stored
@@ -68,6 +68,7 @@ public class PickUp : MonoBehaviour
 
     void Update()
     {
+        _storeKey = Keybinds.Instance.StoreItem;
         _actionKey = Keybinds.Instance.Interact; // Constantly set the action key to the correct keybind
         
         if (interactable == true)

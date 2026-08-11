@@ -8,7 +8,7 @@ public class DragObject : MonoBehaviour
     public bool interactable, pickedup;
     public Rigidbody objRigidbody;
 
-    public KeyCode _actionKey = KeyCode.E;
+    public KeyCode _actionKey;
 
     void OnTriggerStay(Collider other)
     {
@@ -54,6 +54,8 @@ public class DragObject : MonoBehaviour
     }
     void Update()
     {
+        _actionKey = Keybinds.Instance.Interact;
+        
         if (interactable == true)
         {
             if (Input.GetKeyDown(_actionKey))
