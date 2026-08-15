@@ -8512,6 +8512,7 @@ GameObject:
   - component: {fileID: 654237076}
   - component: {fileID: 654237077}
   - component: {fileID: 654237078}
+  - component: {fileID: 654237079}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -8605,6 +8606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OpenInv
   inventory: {fileID: 2036913045}
   toggleKey: 9
+  player: {fileID: 654237072}
 --- !u!114 &654237076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8653,6 +8655,21 @@ MonoBehaviour:
   StoreItem: 323
   OpenInventory: 9
   ToolPrimaryAction: 324
+--- !u!114 &654237079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654237071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f691910bc0ef846bcf24846abe2eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OpenBuildMenu
+  buildMenu: {fileID: 1077102834}
+  toggleKey: 0
+  player: {fileID: 654237072}
 --- !u!1 &689314812
 GameObject:
   m_ObjectHideFlags: 0
@@ -11227,7 +11244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1077102835
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13102,7 +13119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1422209119
 RectTransform:
   m_ObjectHideFlags: 0
