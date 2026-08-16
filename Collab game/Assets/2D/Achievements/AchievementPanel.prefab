@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 479250453397298930}
   - component: {fileID: 2245560141990678252}
   - component: {fileID: 732302423114199509}
+  - component: {fileID: 6834311486987574577}
   m_Layer: 0
   m_Name: AchievementPanel
   m_TagString: Untagged
@@ -153,6 +154,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6834311486987574577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4117967145346475698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59c979c5956a2aa4dbc417c54c95e53d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConstructorButton
+  constructible: {fileID: 0}
+  plrObject: {fileID: 0}
+  infoUI: {fileID: 0}
 --- !u!1 &5646942526018161252
 GameObject:
   m_ObjectHideFlags: 0

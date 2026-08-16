@@ -56,7 +56,7 @@ public class InvButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
                     RectTransform rect = infoUI.GetComponent<RectTransform>();
 
-                    float uiSize = (textHeight*1.4f) + 10;
+                    float uiSize = (textHeight*1.4f);
 
                     rect.sizeDelta = new Vector2(rect.sizeDelta.x, uiSize);
                 }

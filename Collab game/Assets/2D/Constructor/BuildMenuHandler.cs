@@ -8,6 +8,7 @@ public class BuildMenuHandler : MonoBehaviour
     public Transform player;
     public Transform UiContent;
     public GameObject buttonTemplate;
+    public GameObject infoUI;
 
     private void Awake()
     {
@@ -22,10 +23,13 @@ public class BuildMenuHandler : MonoBehaviour
         }
         foreach (var constructible in ConstructorIndex.Instance.Constructibles)
         {
-            print(constructible.name);
             GameObject button = Instantiate(buttonTemplate, UiContent);
             var buttonIcon = button.transform.Find("Icon").GetComponent<Image>();
             buttonIcon.sprite = constructible.icon;
+
+            button.GetComponent<ConstructorButton>().constructible = constructible;
+            button.GetComponent<ConstructorButton>().plrObject = player;
+            button.GetComponent<ConstructorButton>().infoUI = infoUI;
         }
     }
 }
