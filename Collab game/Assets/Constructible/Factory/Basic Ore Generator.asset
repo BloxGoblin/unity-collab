@@ -17,4 +17,4 @@ MonoBehaviour:
   objectDesc: Infinitely dense point of energy that can create lower tier mineral
     clumps
   Object: {fileID: 6403433373872144926, guid: aae3d3ab11a2d644bb268d68f3bdf615, type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 560d0e67ede2af94299a947a52ad6450, type: 3}

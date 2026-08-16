@@ -25,6 +25,7 @@ public class OpenBuildMenu : MonoBehaviour
             else
             {
                 buildMenu.SetActive(true);
+                BuildMenuHandler.Instance.ListButtons();
 
                 CameraController.Instance.UnlockMouse();
             }
