@@ -88,6 +88,10 @@ public class SmeltOre : MonoBehaviour
                         result.GetComponent<PickUp>()._objectParent = _objectParent;
                         result.GetComponent<PickUp>().cameraTrans = _cameraTrans;
                     }
+                    else
+                    {
+                        print("no pick up component");
+                    }
 
                     Destroy(content);
                     inFurnace.RemoveAt(i);
