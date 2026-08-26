@@ -46,6 +46,8 @@ public class ConstructorButton : MonoBehaviour, IPointerEnterHandler, IPointerEx
                     infoUI.transform.Find("Object Description").GetComponent<TMP_Text>().text = "Empty Description";
                 }
             }
+
+            
         }
     }
 }

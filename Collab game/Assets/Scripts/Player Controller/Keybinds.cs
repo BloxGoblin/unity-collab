@@ -19,6 +19,7 @@ public class Keybinds : MonoBehaviour
     public KeyCode StoreItem = KeyCode.Mouse0;
     public KeyCode OpenInventory = KeyCode.Tab;
     public KeyCode ToolPrimaryAction = KeyCode.Mouse1;
+    public KeyCode Select = KeyCode.Mouse0;
 
     void Awake()
     {
@@ -31,6 +32,8 @@ public class Keybinds : MonoBehaviour
         bindings.Add(new Keybinding {actionName = "StoreItem", key = StoreItem});
         bindings.Add(new Keybinding {actionName = "OpenInventory", key = OpenInventory});
         bindings.Add(new Keybinding {actionName = "ToolPrimaryAction", key = ToolPrimaryAction});
+        bindings.Add(new Keybinding {actionName = "Select", key = Select});
+
 
         UpdateKeybinds();
     }
@@ -55,6 +58,11 @@ public class Keybinds : MonoBehaviour
         if (LoadKey("ToolPrimaryAction", ToolPrimaryAction) != ToolPrimaryAction)
         {
             ToolPrimaryAction = LoadKey("ToolPrimaryAction", ToolPrimaryAction);
+        }
+
+        if (LoadKey("Select", Select) != Select)
+        {
+            Select = LoadKey("Select", Select);
         }
 
         for (int i = 0; i < bindings.Count; i++)

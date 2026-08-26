@@ -68,5 +68,6 @@
         "*.slnx": "*.csproj"
     },
     "dotnet.defaultSolution": "Collab game.slnx",
-    "dotnet.enableWorkspaceBasedDevelopment": false
+    "dotnet.enableWorkspaceBasedDevelopment": false,
+    "python-envs.defaultEnvManager": "ms-python.python:venv"
 }
