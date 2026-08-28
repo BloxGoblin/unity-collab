@@ -50,6 +50,7 @@ public class ConstructorButton : MonoBehaviour, IPointerEnterHandler, IPointerEx
             if (Input.GetKeyDown(Keybinds.Instance.Select))
             {
                 print("Ok");
+                Build.Instance.SelectBuild(constructible);
             }
         }
     }

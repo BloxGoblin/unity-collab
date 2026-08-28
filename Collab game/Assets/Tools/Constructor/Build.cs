@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Build : MonoBehaviour
@@ -5,17 +6,34 @@ public class Build : MonoBehaviour
     public static Build Instance;
     public Transform player;
     public Transform preBuildParent;
+    public Constructible selectedBuild;
+    public GameObject preBuild = null;
+
+    private void Awake()
+    {
+        Instance = this;
+        selectedBuild = player.GetComponent<Player>().buildSelected;
+    }
 
     public void SelectBuild(Constructible constructible)
     {
-        Player.Instance.buildSelected = constructible;
+        selectedBuild = constructible;
     }
 
     void Update()
     {
-        if (Player.Instance.buildSelected != null)
+        if (selectedBuild != null)
         {
-            
+            if (selectedBuild == null)
+            {
+                preBuild = Instantiate(selectedBuild.Object, player.transform.position, player.transform.rotation, preBuildParent);
+                print(selectedBuild);
+            }
+            else if (selectedBuild != null && preBuild != null)
+            {
+                preBuild.transform.position = player.transform.position;
+                preBuild.transform.rotation = player.transform.rotation;
+            }
         }
     }
 }

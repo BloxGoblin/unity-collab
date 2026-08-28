@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public static Player Instance;
     public GameObject player;
     public bool playing = false;
-    public Constructible buildSelected;
+    public Constructible buildSelected = null;
 
     public GameObject mainMenu;
     public GameObject pauseMenu;
