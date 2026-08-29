@@ -24,7 +24,7 @@ public class Build : MonoBehaviour
     {
         if (selectedBuild != null)
         {
-            if (selectedBuild == null)
+            if (preBuild == null)
             {
                 preBuild = Instantiate(selectedBuild.Object, player.transform.position, player.transform.rotation, preBuildParent);
                 print(selectedBuild);
