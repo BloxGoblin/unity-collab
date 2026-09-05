@@ -31,8 +31,8 @@ public class Build : MonoBehaviour
             }
             else if (selectedBuild != null && preBuild != null)
             {
-                preBuild.transform.position = player.transform.position;
-                preBuild.transform.rotation = player.transform.rotation;
+                preBuild.transform.position = player.Find("PlayerObj").transform.position;
+                preBuild.transform.rotation = player.Find("PlayerObj").transform.rotation;
             }
         }
     }

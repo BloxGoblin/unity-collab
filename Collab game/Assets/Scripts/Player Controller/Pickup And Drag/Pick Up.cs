@@ -17,6 +17,11 @@ public class PickUp : MonoBehaviour
     [Header("If Object can be stored")]
     public Item Item; // If the item can be stored
 
+    void Awake()
+    {
+        PickUpSetup.Instance.SetupObject(gameObject);
+    }
+
     void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("MainCamera"))

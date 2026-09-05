@@ -15,13 +15,6 @@ public class SmeltOre : MonoBehaviour
 
     public List<GameObject> inFurnace = new List<GameObject>();
 
-    [Header("Pick Up Settings")]
-    public GameObject crosshair1; //1-Normal 2-Pick up 3-Drag
-    public GameObject crosshair2;
-    public GameObject crosshair3;
-    public Transform _objectParent;
-    public Transform _cameraTrans;
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<CanSmelt>())
@@ -79,19 +72,6 @@ public class SmeltOre : MonoBehaviour
                     Vector3 spawnPos = content.transform.position; // Adjust this later
 
                     Instantiate(result, spawnPos, gameObject.transform.rotation, dropsParent);
-
-                    if (result.GetComponent<PickUp>())
-                    {
-                        result.GetComponent<PickUp>().crosshair1 = crosshair1;
-                        result.GetComponent<PickUp>().crosshair2 = crosshair2;
-                        result.GetComponent<PickUp>().crosshair3 = crosshair3;
-                        result.GetComponent<PickUp>()._objectParent = _objectParent;
-                        result.GetComponent<PickUp>().cameraTrans = _cameraTrans;
-                    }
-                    else
-                    {
-                        print("no pick up component");
-                    }
 
                     Destroy(content);
                     inFurnace.RemoveAt(i);
